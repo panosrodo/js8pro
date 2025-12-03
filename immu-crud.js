@@ -6,12 +6,12 @@ numbers.push(5)
 numbers.splice(3, 0, 5)
 
 // Immutable - Fresh copy - insert at end
-const addToArray = (arr, num) => {
+const addToArrayEnd = (arr, num) => {
     return [...numbers, num ]
 }
 
 const addToArrayFirst = (arr, num) => {
-    return [num, ...numbers]
+    return [num, ...numbers] 
 }
 
 // add to index
@@ -24,9 +24,8 @@ const addToArrayAt = (arr, num, index) => {
 numbers.splice(3, 1, 8)
 
 // Immutable
-const updateOne = (arr, index, newVal) => {
-    arr.map((val, i) => (i === index) ? newVal : val )
-}
+const updateOne = (arr, index, newVal) => arr.map((val, i) => (i === index) ? newVal : val )
+
 
 updateOne(numbers, 3, 90)
 
@@ -35,6 +34,4 @@ let index = numbers.indexOf(1)
 if (index !== -1) numbers.splice(index, 1)
 
 // Immutable delete
-const removeFromArray = (arr, num) => {
-    arr.filter(n => n !== num )
-}
+const removeFromArray = (arr, num) =>  arr.filter(n => n !== num )
